@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growtopia Download</title>
+    <style>
+        .title-section {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: mintcream;
+            border: 2px solid #000;
+            font-size: 18px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: white;
+        }
+
+        .free-badge {
+            display: inline-block;
+            background-color: mintcream;
+            border: 2px solid #000;
+            padding: 5px 15px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .download-button {
+            display: block;
+            background-color: ghostwhite;
+            border: 2px solid #000;
+            padding: 10px;
+            margin: 15px 0;
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            padding-left: 40px;
+            font-size: 18px;
+        }
+
+        .download-button::before {
+            content: "↓";
+            position: absolute;
+            left: 15px;
+            font-size: 20px;
+        }
+
+        .download-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .version-info {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="free-badge">Free GL</div>
+        <div class="title-section">
+            <h3>Growtopia</h3>
+            <a href="#" id="growtopiaBtn" class="download-button" aria-label="Download Growtopia">Growtopia</a>
+            <a href="#" id="growlauncherBtn" class="download-button" aria-label="Download GrowLauncher">GrowLauncher</a>
+            <a href="#" id="gentaBtn" class="download-button" aria-label="Download Genta">Genta</a>
+            <a href="#" id="hostBtn" class="download-button" aria-label="Download Host">Host</a>
+            <a href="#" id="vhostBtn" class="download-button" aria-label="Download VHost">VHost</a>
+        </div>
+        <div class="version-info" id="versionInfo">Versi: 5.0.2</div>
+    </div>
+    <script>
+        // Fungsi untuk memperbarui link tombol
+        function updateLinks(version) {
+            const growtopiaBtn = document.getElementById('growtopiaBtn');
+            const growlauncherBtn = document.getElementById('growlauncherBtn');
+            const gentaBtn = document.getElementById('gentaBtn');
+            const vhostBtn = document.getElementById('vhostBtn');
+            const hostBtn = document.getElementById('hostBtn');
+            const versionInfo = document.getElementById('versionInfo');
+
+            // Tetapkan URL untuk setiap tombol
+            growtopiaBtn.href = `https://example.com/download/growtopia/${version}`;
+            growlauncherBtn.href = `https://www.mediafire.com/file/jliez9d1znif5hn/GrowLauncher_v6.1.19_%2528FreeGl%2529.apk/file`;
+            gentaBtn.href = `https://drive.google.com/file/d/1xYcv2nDafNtOz2uV9Da90L2zfc0yberu/view?usp=drivesdk`;
+            vhostBtn.href = `https://www.mediafire.com/file/3sawp3yqiqddgfn/Xcf_Free_VHost.apk/file?dkey=g724j20l8v4&r=1387`;
+            hostBtn.href = `https://www.mediafire.com/file/e48xifzonwyj3ms/mafiaps.hosts/file`;
+
+            // Perbarui informasi versi
+            versionInfo.textContent = `Versi: ${version}`;
+        }
+
+        // Tetapkan versi awal
+        updateLinks('5.0.2');
+    </script>
+</body>
+</html>
