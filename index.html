@@ -75,15 +75,14 @@
 
         .copy-section {
             margin-top: 20px;
-            display: flex;
-            align-items: center;
         }
 
         .copy-link {
+            display: block;
             font-size: 16px;
             color: #007BFF;
-            margin-right: 10px;
             text-decoration: none;
+            margin-bottom: 5px;
         }
 
         .copy-button {
@@ -113,9 +112,11 @@
         </div>
         <div class="copy-section">
             <a href="https://growtopia.id/android" class="copy-link" id="androidLink">https://growtopia.id/android</a>
-            <button class="copy-button" id="copyButton">Copy</button></a>
-            <a href="02:00:00:00:00:00" class="copy-link" id="androidLink">https://growtopia.id/android</a>
-            <button class="copy-button" id="copyButton">Copy</button>
+            <button class="copy-button" id="copyButton1">Copy</button>
+        </div>
+        <div class="copy-section">
+            <span class="copy-link" id="macAddress">02:00:00:00:00:00</span>
+            <button class="copy-button" id="copyButton2">Copy</button>
         </div>
         <div class="version-info" id="versionInfo">Versi: 5.0.2</div>
     </div>
@@ -143,10 +144,9 @@
         }
 
         // Fungsi untuk menyalin teks ke clipboard
-        const copyButton = document.getElementById('copyButton');
+        const copyButton1 = document.getElementById('copyButton1');
         const androidLink = document.getElementById('androidLink');
-
-        copyButton.addEventListener('click', () => {
+        copyButton1.addEventListener('click', () => {
             navigator.clipboard.writeText(androidLink.href).then(() => {
                 alert('Tautan berhasil disalin ke clipboard!');
             }).catch(err => {
@@ -154,8 +154,19 @@
             });
         });
 
+        const copyButton2 = document.getElementById('copyButton2');
+        const macAddress = document.getElementById('macAddress');
+        copyButton2.addEventListener('click', () => {
+            navigator.clipboard.writeText(macAddress.textContent).then(() => {
+                alert('Alamat MAC berhasil disalin ke clipboard!');
+            }).catch(err => {
+                alert('Gagal menyalin alamat MAC.');
+            });
+        });
+
         // Tetapkan versi awal
         updateLinks('5.0.2');
     </script>
 </body>
-</html>
+                </html>
+    
